@@ -1,56 +1,63 @@
-# GreenTrack App
+# GreenTrack: Transforming Every Step into Environmental Impact 🌿
 
 ## Description
 
-This application is a Flutter-based mobile app designed to gamify eco-friendly commuting. The goal is to encourage users to choose walking or cycling over driving by providing real-time incentives, social competition, and detailed activity tracking while providing an engaging experience.
+**GreenTrack** is a next-generation mobile platform that bridges the gap between urban mobility and environmental health. While traditional fitness apps focus solely on calories, GreenTrack focuses on the **planet**. 
 
-It enhances the user experience by offering dynamic point multipliers based on live air quality data — rewarding users for choosing sustainable transport in areas with higher pollution — making the environmental impact tangible. Unlike generic fitness apps, this app focuses specifically on ecological metrics and global sustainability, providing a niche experience for environmentally conscious users.
+Our application gamifies the daily commute by turning sustainable choices—like walking and cycling—into a competitive and rewarding experience. By integrating live environmental data, we've created a unique ecosystem where the user's effort is measured not just in kilometers, but in **CO2 offset and real-world impact**.
+
+### The "Eco-Hero" Philosophy
+The core innovation of GreenTrack is our **Dynamic Reward System**. We believe that choosing to cycle or walk in a city with poor air quality is a heroic act. Therefore, the app automatically scales your rewards: the more challenging the environment (higher AQI), the higher the point multiplier (up to 2.5x). You aren't just commuting; you're actively fighting the smog where it's needed most.
 
 ## Screenshots and Navigation
 
 <p align="center">
-  <img src="screens/1.png" width="250" title="Dashboard">
-  <img src="screens/2.png" width="250" title="Dashboard">
-  <img src="screens/3.png" width="250" title="Dashboard">
-  <img src="screens/4.png" width="250" title="Dashboard">
-  <img src="screens/5.png" width="250" title="Dashboard">
-  <img src="screens/6.png" width="250" title="Dashboard">
-  <img src="screens/7.png" width="250" title="Dashboard">
-  <img src="screens/8.png" width="250" title="Dashboard">
+  <img src="screens/1.png" width="210" title="Dashboard">
+  <img src="screens/2.png" width="210" title="Activity Details">
+  <img src="screens/3.png" width="210" title="Spain AQI Map">
+  <img src="screens/4.png" width="210" title="Training Summary">
+</p>
+<p align="center">
+  <img src="screens/5.png" width="210" title="Achievements">
+  <img src="screens/6.png" width="210" title="Leaderboard">
+  <img src="screens/7.png" width="210" title="Daily Goals">
+  <img src="screens/8.png" width="210" title="Simulation Mode">
 </p>
 
 ## Demo Video
 
-[![GreenTrack Demo]](https://youtube.com/shorts/EwqLkhP-7vE)
+[![GreenTrack Demo](https://img.youtube.com/vi/EwqLkhP-7vE/0.jpg)](https://youtube.com/shorts/EwqLkhP-7vE)
 
-*Click the image above to watch the demo on YouTube.*
+*Click the link above to watch the short demo of the GreenTrack experience.*
 
 ## Functional Features
 
-* **Eco-Points Tracking:** Earn points for every sustainable trip you take.
-* **Environmental Impact:** Visual feedback on "Trees Saved" based on CO2 reduction metrics.
-* **Daily Goals:** A 100-point daily goal system with visual progress tracking.
-* **Real-time AQI Integration:** Live data from Open-Meteo API providing bonuses for commuting in polluted cities.
-* **Leaderboard System:** Competitive rankings across Daily, Weekly, and Monthly tabs.
-* **Achievements System:** 24+ unlockable badges for reaching specific eco-milestones.
+* **🌍 Live AQI Multipliers:** Real-time integration with the **Open-Meteo API** for 50 Spanish cities. If you cycle in a "Red Zone" (high pollution), your points are doubled to reward your commitment to zero-emission travel.
+* **🌳 Trees Saved Metric:** We translate abstract CO2 data into something tangible. For every 2kg of CO2 you save (by avoiding a car trip), you earn one "Tree Saved" unit on your dashboard.
+* **🏆 Competitive Leaderboards:** Stay motivated with Daily, Weekly, and Monthly rankings. Compete with 50+ users to see who is the true "Eco-King".
+* **🎖️ Achievement Odyssey:** A collection of 24+ unlockable badges, from "Early Bird" for morning commuters to "CO2 Hero" for massive carbon offsets.
+* **📊 Comprehensive Training Summary:** A dedicated section that aggregates your walking and cycling data, calculating total calories burned, average pace, and total distance.
 
 ## Technical Features
 
-* **Architecture:** Stateful Dashboard architecture for real-time UI updates.
-* **UI Framework:** Built entirely with Flutter and Material Design 3.
-* **Persistence:** `SharedPreferences` for local storage of commutes and user progress.
-* **API Integration:** `http` package for fetching live European AQI data.
-* **Visual Rewards:** `confetti` package for celebrating goal completions.
-* **Language:** 100% Dart.
+* **Architecture:** Robust **Stateful Management** for real-time dashboard updates and responsive UI.
+* **UI Framework:** Built with **Flutter & Material Design 3**, featuring custom-themed components, smooth transitions, and a clean, nature-inspired aesthetic.
+* **Persistence Layer:** Implemented using **SharedPreferences** with custom JSON serialization. Your trip history and achievements are stored locally and persist through app restarts.
+* **API Logic:** Custom service layer for fetching and parsing European Air Quality data, featuring error handling and fail-safe mock data fallbacks.
+* **Dynamic Feedback:** Integrated **Confetti animations** to trigger "Dopamine Hits" upon reaching the 100-point daily goal.
 
-## How to Use
+## Sustainability Metrics
 
-1. **Launch the App:** Open the GreenTrack app on your mobile device.
-2. **Dashboard Overview:** Check your current Eco-Points, Trees Saved, and Daily Goal progress.
-3. **Start Commute:** Tap the "Start Commute" button to simulate a new eco-friendly trip.
-4. **View Activity Details:** Click on any commute in the list to see detailed stats like calories, pace, and CO2 saved.
-5. **Explore Features:** Access Air Quality stats, Training Summaries, Achievements, or the Leaderboard via the top-right corner icons.
-6. **Achieve Goals:** Reach 100 points to trigger the reward animation and fill your daily progress.
+GreenTrack uses industry-standard approximations to calculate your impact:
+- **Walking/Cycling:** +0.2kg CO2 saved per km.
+- **Car Driving:** -0.2kg CO2 impact per km.
+- **Tree Offset:** 1 Tree unit = 2kg of CO2 reduction (representing the daily absorption capacity of a mature tree).
+
+## Global Impact (SDG Alignment)
+
+GreenTrack actively contributes to the **United Nations Sustainable Development Goals**:
+- **Goal 11:** Sustainable Cities and Communities.
+- **Goal 13:** Climate Action.
 
 ## Participants
 
