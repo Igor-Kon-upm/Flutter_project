@@ -21,7 +21,7 @@ It enhances the user experience by offering dynamic point multipliers based on l
 
 ## Demo Video
 
-[![GreenTrack Demo](https://img.youtube.com/vi/TWÓJ_ID_FILMU/0.jpg)](https://www.youtube.com/watch?v=TWÓJ_ID_FILMU)
+[![GreenTrack Demo]](https://youtube.com/shorts/EwqLkhP-7vE)
 
 *Click the image above to watch the demo on YouTube.*
 
