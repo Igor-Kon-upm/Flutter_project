@@ -16,6 +16,7 @@ It enhances the user experience by offering dynamic point multipliers based on l
   <img src="screens/5.png" width="250" title="Dashboard">
   <img src="screens/6.png" width="250" title="Dashboard">
   <img src="screens/7.png" width="250" title="Dashboard">
+  <img src="screens/8.png" width="250" title="Dashboard">
 </p>
 
 ## Demo Video
