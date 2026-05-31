@@ -28,7 +28,7 @@ The core innovation of GreenTrack is our **Dynamic Reward System**. We believe t
 
 [![GreenTrack Demo](https://img.youtube.com/vi/EwqLkhP-7vE/0.jpg)](https://youtube.com/shorts/EwqLkhP-7vE)
 
-*Click the link above to watch the short demo of the GreenTrack experience.*
+*Click the image above to watch the short demo of the GreenTrack experience.*
 
 ## Functional Features
 
