@@ -1,85 +1,61 @@
-# GreenTrack 🌿
+# GreenTrack App
 
-GreenTrack is a Flutter-based mobile application designed to gamify eco-friendly commuting. It encourages users to choose walking or cycling over driving by providing real-time incentives, social competition, and detailed activity tracking.
+## Description
 
-## 🚀 Features
+This application is a Flutter-based mobile app designed to gamify eco-friendly commuting. The goal is to encourage users to choose walking or cycling over driving by providing real-time incentives, social competition, and detailed activity tracking while providing an engaging experience.
 
-### 1. Interactive Dashboard
-- **Eco-Points Tracking:** Earn points for every sustainable trip you take.
-- **Environmental Impact:** See your contribution in "Trees Saved" (based on 2kg of CO2 saved per tree impact).
-- **Daily Goals:** A 100-point daily goal with a visual progress bar and reward system.
+It enhances the user experience by offering dynamic point multipliers based on live air quality data — rewarding users for choosing sustainable transport in areas with higher pollution — making the environmental impact tangible. Unlike generic fitness apps, this app focuses specifically on ecological metrics and global sustainability, providing a niche experience for environmentally conscious users.
 
-### 2. Commute Simulation
-- **Multi-modal Tracking:** Support for Walking, Cycling, and Car commutes.
-- **Detailed Metrics:** Automatically calculates:
-  - Distance (km)
-  - CO2 Saved (kg)
-  - Calories Burned (based on activity type)
-  - Pace (min/km)
-  - Duration
+## Screenshots and Navigation
 
-### 3. Real-time Air Quality (AQI) Integration
-- **Live Data:** Fetches European AQI data for 50 Spanish cities using the Open-Meteo API.
-- **Dynamic Multipliers:** Earn bonus points (up to 2.5x) for cycling or walking in cities with poor air quality—rewarding your "heroic" effort to reduce pollution where it matters most.
+<p align="center">
+  <img src="screens/1.png" width="250" title="Dashboard">
+  <img src="screens/2.png" width="250" title="Dashboard">
+  <img src="screens/3.png" width="250" title="Dashboard">
+  <img src="screens/4.png" width="250" title="Dashboard">
+  <img src="screens/5.png" width="250" title="Dashboard">
+  <img src="screens/6.png" width="250" title="Dashboard">
+  <img src="screens/7.png" width="250" title="Dashboard">
+</p>
 
-### 4. Gamification & Rewards
-- **Achievements:** Over 24 unique badges to unlock (e.g., "CO2 Hero", "Early Bird", "Marathon Man").
-- **Leaderboards:** Competitive rankings across Daily, Weekly, and Monthly tabs with 50+ mock entries.
-- **Visual Feedback:** Confetti celebrations upon reaching your daily goal.
+## Demo Video
 
-### 5. Training Summary
-- Aggregate statistics for all walking and cycling activities.
-- View total workouts, total distance covered, total time spent, and total calories burned.
+[![GreenTrack Demo](https://img.youtube.com/vi/TWÓJ_ID_FILMU/0.jpg)](https://www.youtube.com/watch?v=TWÓJ_ID_FILMU)
 
-### 6. Data Persistence
-- Uses `shared_preferences` to ensure your commute history and total points are saved locally on your device.
+*Click the image above to watch the demo on YouTube.*
 
-## 🛠️ Tech Stack
+## Functional Features
 
-- **Framework:** Flutter (Material 3)
-- **Language:** Dart
-- **API:** [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api)
-- **Key Packages:**
-  - `http`: For API requests.
-  - `shared_preferences`: For local data storage.
-  - `confetti`: For goal completion animations.
-  - `intl`: For date and number formatting.
+* **Eco-Points Tracking:** Earn points for every sustainable trip you take.
+* **Environmental Impact:** Visual feedback on "Trees Saved" based on CO2 reduction metrics.
+* **Daily Goals:** A 100-point daily goal system with visual progress tracking.
+* **Real-time AQI Integration:** Live data from Open-Meteo API providing bonuses for commuting in polluted cities.
+* **Leaderboard System:** Competitive rankings across Daily, Weekly, and Monthly tabs.
+* **Achievements System:** 24+ unlockable badges for reaching specific eco-milestones.
 
-## 📦 Installation
+## Technical Features
 
-1. **Prerequisites:**
-   - Ensure you have [Flutter](https://docs.flutter.dev/get-started/install) installed.
-   - **Important for Windows Users:** Enable **Developer Mode** in your Windows System Settings to allow the creation of symbolic links required by Flutter plugins.
+* **Architecture:** Stateful Dashboard architecture for real-time UI updates.
+* **UI Framework:** Built entirely with Flutter and Material Design 3.
+* **Persistence:** `SharedPreferences` for local storage of commutes and user progress.
+* **API Integration:** `http` package for fetching live European AQI data.
+* **Visual Rewards:** `confetti` package for celebrating goal completions.
+* **Language:** 100% Dart.
 
-2. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/greentrack.git
-   cd greentrack
-   ```
+## How to Use
 
-3. **Install dependencies:**
-   ```bash
-   flutter pub get
-   ```
+1. **Launch the App:** Open the GreenTrack app on your mobile device.
+2. **Dashboard Overview:** Check your current Eco-Points, Trees Saved, and Daily Goal progress.
+3. **Start Commute:** Tap the "Start Commute" button to simulate a new eco-friendly trip.
+4. **View Activity Details:** Click on any commute in the list to see detailed stats like calories, pace, and CO2 saved.
+5. **Explore Features:** Access Air Quality stats, Training Summaries, Achievements, or the Leaderboard via the top-right corner icons.
+6. **Achieve Goals:** Reach 100 points to trigger the reward animation and fill your daily progress.
 
-4. **Run the app:**
-   ```bash
-   flutter run
-   ```
+## Participants
 
-## 📉 Metrics Logic
+**MAD Developers:**
 
-- **CO2 Calculation:**
-  - Walking/Cycling: +0.2kg saved per km.
-  - Car: -0.2kg impact per km.
-- **Points:** Base points are calculated by distance, modified by the city's Air Quality multiplier at the time of the trip.
-- **Trees Saved:** 1 "Tree Saved" unit = 2kg of CO2 offset.
+* **[Igor Kondrat]** (i.kondrat@alumnos.upm.es)
+* **[Silvana Dimitrova]** (silvana.dimitrova@alumnos.upm.es)
 
-## 🛤️ Roadmap
-- [ ] Integration with Google Maps for real GPS tracking.
-- [ ] Social features: Add friends and share achievements.
-- [ ] Monthly eco-reports exported to PDF.
-- [ ] Support for public transport (Bus/Train) with specific CO2 metrics.
-
----
-*Created as part of an eco-friendly initiatives simulation project.*
+**Workload distribution:** (50%/50%)

@@ -43,36 +43,48 @@ class CommuteTile extends StatelessWidget {
   void _showDetails(BuildContext context) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) {
         return Padding(
-          padding: const EdgeInsets.all(24.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(_getTypeIcon(commute.type), size: 48, color: _getTypeColor(commute.type)),
-              const SizedBox(height: 16),
-              Text(
-                '${commute.typeName} Details',
-                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
-              const Divider(height: 32),
-              _buildDetailRow(Icons.straighten, 'Distance', '${commute.distanceKm} km'),
-              _buildDetailRow(Icons.timer, 'Duration', '${commute.durationMinutes} min'),
-              if (commute.type != CommuteType.car) ...[
-                _buildDetailRow(Icons.speed, 'Average Pace', '${commute.pace} min/km'),
-                _buildDetailRow(Icons.local_fire_department, 'Calories Burned', '${commute.caloriesBurned} kcal'),
+          padding: EdgeInsets.only(
+            top: 24.0,
+            left: 24.0,
+            right: 24.0,
+            bottom: MediaQuery.of(context).viewInsets.bottom + 24.0,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(_getTypeIcon(commute.type), size: 48, color: _getTypeColor(commute.type)),
+                const SizedBox(height: 16),
+                Text(
+                  '${commute.typeName} Details',
+                  style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                const Divider(height: 32),
+                _buildDetailRow(Icons.straighten, 'Distance', '${commute.distanceKm} km'),
+                _buildDetailRow(Icons.timer, 'Duration', '${commute.durationMinutes} min'),
+                if (commute.type != CommuteType.car) ...[
+                  _buildDetailRow(Icons.speed, 'Average Pace', '${commute.pace} min/km'),
+                  _buildDetailRow(Icons.local_fire_department, 'Calories Burned', '${commute.caloriesBurned} kcal'),
+                ],
+                _buildDetailRow(Icons.eco, 'CO2 Saved', '${commute.co2SavedKg} kg'),
+                _buildDetailRow(Icons.star, 'Points Earned', '${commute.points} pts'),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('Close'),
+                  ),
+                ),
+                const SizedBox(height: 8),
               ],
-              _buildDetailRow(Icons.eco, 'CO2 Saved', '${commute.co2SavedKg} kg'),
-              _buildDetailRow(Icons.star, 'Points Earned', '${commute.points} pts'),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('Close'),
-              ),
-            ],
+            ),
           ),
         );
       },
